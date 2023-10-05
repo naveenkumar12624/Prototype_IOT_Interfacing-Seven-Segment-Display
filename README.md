@@ -57,7 +57,7 @@ The LED segments are selected based on the decimal number. For example, if we wa
 ![image](https://user-images.githubusercontent.com/71547910/235332841-7159e75f-b403-43ff-bf96-8ef54ad0310a.png)
 
 ## PROGRAM:
-```c
+````
 int cnt=0;
 int incPrev, decPrev;
 void setup()
@@ -153,12 +153,16 @@ cnt=0;
 switch (cnt);
 }
 }
-```
+````
 ## CIRCUIT DIAGRAM:
-![image](1.png)
+![image](https://github.com/Balaji-Jothiramalingam/Interfacing-Seven-Segment-Display/assets/114234865/440594d8-344e-433b-bc9d-d38e7fb07319)
+
+
 
 ## OUTPUT:
-![image](2.png)
+
+![image](https://github.com/Balaji-Jothiramalingam/Interfacing-Seven-Segment-Display/assets/114234865/7d807442-00b8-43dd-a006-7011c23102bb)
+
 
 ## RESULT:
 Thus the characters and numbers are displayed in the seven segment display using Arduino UNO controller
