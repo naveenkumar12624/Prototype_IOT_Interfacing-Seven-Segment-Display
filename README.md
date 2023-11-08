@@ -1,4 +1,4 @@
-# Interfacing Seven Segment Display
+# EX.NO-08 - Interfacing Seven Segment Display
 
 ## AIM:
 To display the characters and numbers in the seven segment display using Arduino UNO controller.
@@ -27,37 +27,28 @@ Step13:Click start button and check the output
 ## THEORY:
 
 ### What is a seven-segment display?
-
 The seven-segment display is a bunch of eight LEDs arranged in a particular pattern. The pattern traces an outline of the digit ‘8’. Out of these eight LEDs, seven are line-shaped arranged in the shape of number eight, and one is a circular LED. The circular LED is mostly used to indicate decimal points.Each of these eight LEDs is individually controllable via separate pins on the display module. Due to this particular arrangement, it can display numbers from 0 to 9 and alphabets from A to F. Since LEDs are cheap and easy to use, a seven-segment display is sufficient for simple projects.
 
 ### Understanding the 7 segment display
-
 To properly understand how to use a seven-segment display in tandem with an Arduino or any system for that matter, we need to understand its internal as well as external construction.The internal circuit of a seven-segment display
-
 ![image](https://user-images.githubusercontent.com/71547910/235332708-1cd24f92-c15c-44eb-aade-e2bad64f6f5b.png)
-
 Study the internal circuitry of a seven-segment display, as shown in the picture above carefully. You’ll notice the carefully laid out LEDs. Notice how in both the configurations, one off the two ends of the LEDs is connected to a common line. This common line is either GND (left) or VCC (right). Let’s talk about that a bit. Your 7-segment display is possibly one of two types: Common cathode,Common anode
 
 ### What is a common anode seven-segment display?
-
 For an LED to light up, the anode needs to connect with a power source. And the cathode needs to connect with the ground. That’s the basic working of an LED.In a common anode display, all the eight LEDs have their anodes interconnected. This means that the power supply to all the LEDs will be via one common pin. But don’t we need to control each of these LEDs separately to display different characters.Thus the individual control comes from the free multiple cathode pins. To switch on any of the eight LEDs, its cathode pin needs to be grounded. And since the LEDs retain their individual cathode pins, we can use them to control them.All you need to remember is this: To light up a common anode seven-segment display, you have to ground/write a LOW output on the pins that need to be lit up
 
 ![image](https://user-images.githubusercontent.com/71547910/235332776-7ef7146a-16de-4a56-aff5-2937652364a8.png)
 
 ### What is the common cathode seven-segment display?
-
 This type is just a reverse design of the common anode type. In a common cathode seven-segment display, all of the cathode pins are connected to a common ground (GND). Thus the individual control comes from the free multiple anode pins. To switch on any of the eight LEDs, its anode pin needs to be given power.All you need to remember is this: To light up a common cathode seven-segment display, you have to write a HIGH output on the pins that need to be lit up
-
 ![image](https://user-images.githubusercontent.com/71547910/235332805-4c1a1a34-0aec-4378-b621-f42b10d30391.png)
 
 ### Working principle of the seven-segment display
-
 The LED segments are selected based on the decimal number. For example, if we want to display the number 8, we should select all of the LEDs a, b, c, d, e, f, g.You can turn on the needed LED segments, depending on the number or alphabet you wish to display. You can select the LED segments according to the table shown below. To display any character from the table below, you just need to send the corresponding hex codes to the right pins.
-
 ![image](https://user-images.githubusercontent.com/71547910/235332841-7159e75f-b403-43ff-bf96-8ef54ad0310a.png)
 
 ## PROGRAM:
-````
+```c
 int cnt=0;
 int incPrev, decPrev;
 void setup()
@@ -153,16 +144,12 @@ cnt=0;
 switch (cnt);
 }
 }
-````
+```
 ## CIRCUIT DIAGRAM:
 ![image](https://github.com/Balaji-Jothiramalingam/Interfacing-Seven-Segment-Display/assets/114234865/440594d8-344e-433b-bc9d-d38e7fb07319)
 
-
-
 ## OUTPUT:
-
 ![image](https://github.com/Balaji-Jothiramalingam/Interfacing-Seven-Segment-Display/assets/114234865/7d807442-00b8-43dd-a006-7011c23102bb)
-
 
 ## RESULT:
 Thus the characters and numbers are displayed in the seven segment display using Arduino UNO controller
